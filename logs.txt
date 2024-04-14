@@ -1,0 +1,422 @@
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135
+$ git init
+Initialized empty Git repository in C:/Users/velic/Desktop/SI_2024_lab1_225135/.git/
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (main)
+$ git branch -m master
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git remote add origin git@github.com:davidvelickovic17/SI_2024_lab1_225135.git
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ nano README.md
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ cat README.md 1
+# Давид Величковиќ 225135
+cat: 1: No such file or directory
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ cat README.md
+# Давид Величковиќ 225135
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git commit -m "initial commit"
+[master (root-commit) e03d7b6] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git remote -v
+origin  git@github.com:davidvelickovic17/SI_2024_lab1_225135.git (fetch)
+origin  git@github.com:davidvelickovic17/SI_2024_lab1_225135.git (push)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SILab1Main.java
+        SILab1_1.java
+        SILab1_2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git add *.java
+warning: LF will be replaced by CRLF in SILab1Main.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SILab1_1.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SILab1_2.java.
+The file will have its original line endings in your working directory
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git commit -m "Add starter code"
+[master c88fe4e] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git config --global --list
+user.email=david.velickovic225135@gmail.com
+user.name=davidvelickovic17
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git pull origin master
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+fatal: couldn't find remote ref master
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git push origin master
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.12 KiB | 1.12 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:davidvelickovic17/SI_2024_lab1_225135.git
+ * [new branch]      master -> master
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git chekout master
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git checkout master
+Already on 'master'
+M       SILab1_1.java
+M       SILab1_2.java
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git branch bug1
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git branch bug2
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git checkout buh1
+error: pathspec 'buh1' did not match any file(s) known to git
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+M       SILab1_1.java
+M       SILab1_2.java
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_1.java
+        modified:   SILab1_2.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git add SILab1_1.java
+warning: LF will be replaced by CRLF in SILab1_1.java.
+The file will have its original line endings in your working directory
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 beef36a] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git status
+On branch bug2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_2.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git add SILab1_2.java
+warning: LF will be replaced by CRLF in SILab1_2.java.
+The file will have its original line endings in your working directory
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git commit -m " Fix wrong condition in makeBigStringFrom"
+[bug2 0cddb38]  Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ ^C
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ ^C
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git chekcout bug1
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git add SILab1Main.java
+warning: LF will be replaced by CRLF in SILab1Main.java.
+The file will have its original line endings in your working directory
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 d4668ed] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ ^C
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git add SILab1Main.java
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 6f0a146] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git push --all
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.28 KiB | 656.00 KiB/s, done.
+Total 12 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 4 local objects.
+To github.com:davidvelickovic17/SI_2024_lab1_225135.git
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git chekcout master
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git checkout master
+Already on 'master'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ ^C
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git merge bug1
+Updating c88fe4e..d4668ed
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git push --all
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:davidvelickovic17/SI_2024_lab1_225135.git
+   c88fe4e..d4668ed  master -> master
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ ^C
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 6f0a146... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 6f0a146... Call method makeBigStringFrom in main class
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ git checkout master
+error: you need to resolve your current index first
+SILab1Main.java: needs merge
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ git checkout bug2
+error: you need to resolve your current index first
+SILab1Main.java: needs merge
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ ^C
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ git reabse --continiue
+git: 'reabse' is not a git command. See 'git --help'.
+
+The most similar command is
+        rebase
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ git rebase --continiue
+error: unknown option `continiue'
+usage: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+   or: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root [<branch>]
+   or: git rebase --continue | --abort | --skip | --edit-todo
+
+    --onto <revision>     rebase onto given branch instead of upstream
+    --keep-base           use the merge-base of upstream and branch as the current base
+    --no-verify           allow pre-rebase hook to run
+    -q, --quiet           be quiet. implies --no-stat
+    -v, --verbose         display a diffstat of what changed upstream
+    -n, --no-stat         do not show diffstat of what changed upstream
+    --signoff             add a Signed-off-by trailer to each commit
+    --committer-date-is-author-date
+                          make committer date match author date
+    --reset-author-date   ignore author date and use current date
+    -C <n>                passed to 'git apply'
+    --ignore-whitespace   ignore changes in whitespace
+    --whitespace <action>
+                          passed to 'git apply'
+    -f, --force-rebase    cherry-pick all commits, even if unchanged
+    --no-ff               cherry-pick all commits, even if unchanged
+    --continue            continue
+    --skip                skip current patch and continue
+    --abort               abort and check out the original branch
+    --quit                abort but keep HEAD where it is
+    --edit-todo           edit the todo list during an interactive rebase
+    --show-current-patch  show the patch file being applied or merged
+    --apply               use apply strategies to rebase
+    -m, --merge           use merging strategies to rebase
+    -i, --interactive     let the user edit the list of commits to rebase
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --empty <{drop,keep,ask}>
+                          how to handle commits that become empty
+    --autosquash          move commits that begin with squash!/fixup! under -i
+    -S, --gpg-sign[=<key-id>]
+                          GPG-sign commits
+    --autostash           automatically stash/stash pop before and after
+    -x, --exec <exec>     add exec lines after each commit of the editable list
+    -r, --rebase-merges[=<mode>]
+                          try to rebase merges instead of skipping them
+    --fork-point          use 'merge-base --fork-point' to refine upstream
+    -s, --strategy <strategy>
+                          use the given merge strategy
+    -X, --strategy-option <option>
+                          pass the argument through to the merge strategy
+    --root                rebase all reachable commits up to the root(s)
+    --reschedule-failed-exec
+                          automatically re-schedule any `exec` that fails
+    --reapply-cherry-picks
+                          apply all changes, even those already present upstream
+
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2|REBASE 2/2)
+$ git rebase --continue
+[detached HEAD 66fdee3] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully rebased and updated refs/heads/bug2.
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git merge bug2
+Updating d4668ed..66fdee3
+Fast-forward
+ SILab1Main.java | 2 +-
+ SILab1_2.java   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ gut push -all
+bash: gut: command not found
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git push -all
+error: did you mean `--all` (with two dashes)?
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git push --all
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 673 bytes | 673.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:davidvelickovic17/SI_2024_lab1_225135.git
+   d4668ed..66fdee3  master -> master
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'github.com:davidvelickovic17/SI_2024_lab1_225135.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ git push --all --force
+Enter passphrase for key '/c/Users/velic/.ssh/id_ed25519':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:davidvelickovic17/SI_2024_lab1_225135.git
+ + 6f0a146...66fdee3 bug2 -> bug2 (forced update)
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$ nano logs.txt
+
+velic@LAPTOP-5QK3UUVN MINGW64 ~/Desktop/SI_2024_lab1_225135 (master)
+$

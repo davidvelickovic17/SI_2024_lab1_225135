@@ -1,0 +1,52 @@
+1.Успешно инсталирав git, креирав профил на github davidvelickovic17.
+2.На линкот го менувам името на главната гранка од main во master.Кликaме update.Истото го правиме локално со командата $ git branch -m master.
+3.Во your repository кликаме new и го именуваме нашиот repository SI_2024_lab1_225135 и го сетираме на private.
+4.со командите $ mkdir SI_2024_lab1_225135 креираме нов фолдер,со $ cd SI_2024_lab1_225135 влегуваме во фолдерот и со командата git init го иницијализираме git repository, со командата ssh-keygen -t ed25519 -C "david.velickovic225135@gmail.com" генериравб јавен и приватен клуч, јавниот го ставив на github.
+5. git remote add origin git@github.com:davidvelickovic17/SI_2024_lab1_225135.git
+6.Со командата $ nano README.md креираме и запишуваме во нова датотека, $ git add README.md ,$ git commit -m "initial commit"
+7.$ git add *.java
+$ git commit -m "Add starter code"
+8.$ git push origin master
+9.Со камандите $ git branch bug1
+$ git branch bug2 креираме нови гранки од гранката master.
+10.$ git checkout bug1 се префрламе на гранката bug1.
+11.$ git add SILab1_1.java
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+12.$ git checkout bug2
+13.$ git add SILab1_2.java
+$ git commit -m " Fix wrong condition in makeBigStringFrom
+14.$ git checkout bug1
+15.$ git add SILab1Main.java
+$ git commit -m "Call method filterOddLengthStrings in main class"
+16.$ git checkout bug2
+17.$ git add SILab1Main.java
+$ git commit -m "Call method makeBigStringFrom in main class"
+18.$ git checkout master
+$ git push --all
+19.$ git checkout master
+20.$ git merge bug1
+21.$ git push --all
+22.$ git checkout bug2
+23.$ git rebase master
+24.$ git checkout master
+25.$ git merge bug2
+26.$ git push --all --force
+27.$ git push --all --force
+28
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
